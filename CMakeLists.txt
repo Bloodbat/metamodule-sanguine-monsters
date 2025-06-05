@@ -53,9 +53,9 @@ target_link_options(SanguineMonsters PRIVATE
 )
 
 target_sources(SanguineMonsters PRIVATE
-    ${SOURCE_DIR}/src/sanguinecomponents.cpp
-    ${SOURCE_DIR}/src/sanguinehelpers.cpp
-    ${SOURCE_DIR}/src/themes.cpp
+    ${SOURCE_DIR}/SanguineModulesCommon/src/sanguinecomponents.cpp
+    ${SOURCE_DIR}/SanguineModulesCommon/src/sanguinehelpers.cpp
+    ${SOURCE_DIR}/SanguineModulesCommon/src/themes.cpp
     ${SOURCE_DIR}/src/plugin.cpp
     ${SOURCE_DIR}/src/bukavac.cpp
     ${SOURCE_DIR}/src/dungeon.cpp
@@ -72,8 +72,9 @@ target_sources(SanguineMonsters PRIVATE
 
 # Include directories
 target_include_directories(SanguineMonsters PRIVATE 
+    ${SOURCE_DIR}/SanguineModulesCommon/src
     ${SOURCE_DIR}/src
-    ${SOURCE_DIR}/pcg
+    ${SOURCE_DIR}/SanguineModulesCommon/pcgcpp
 )
 
 # Create the plugin
